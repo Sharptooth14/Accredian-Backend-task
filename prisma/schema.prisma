@@ -10,7 +10,7 @@ datasource db {
 model Referral {
   id           String  @id @default(uuid())
   referrerName String
-  referrerEmail String @unique
+  referrerEmail String 
   refereeName   String
   refereeEmail  String @unique
   createdAt     DateTime @default(now())
