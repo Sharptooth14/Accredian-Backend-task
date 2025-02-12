@@ -14,18 +14,19 @@
     }
 
     datasource db {
-    provider = "mysql"
+    provider = "postgresql"
     url      = env("DATABASE_URL")
     }
 
     model Referral {
-    id            Int      @id @default(autoincrement())
-    referrerName  String
-    referrerEmail String  @unique
+    id           String  @id @default(uuid())
+    referrerName String
+    referrerEmail String @unique
     refereeName   String
-    refereeEmail  String
+    refereeEmail  String @unique
     createdAt     DateTime @default(now())
     }
+
 
 
 5. Apply Database Migration:

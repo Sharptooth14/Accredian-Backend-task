@@ -11,7 +11,4 @@ CREATE TABLE "Referral" (
 );
 
 -- CreateIndex
-CREATE UNIQUE INDEX "Referral_referrerEmail_key" ON "Referral"("referrerEmail");
-
--- CreateIndex
 CREATE UNIQUE INDEX "Referral_refereeEmail_key" ON "Referral"("refereeEmail");
