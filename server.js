@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-// ✅ API to create a referral
+// API to create a referral
 app.post("/api/referral/create", async (req, res) => {
   try {
     const { referrerName, referrerEmail, refereeName, refereeEmail } = req.body;
@@ -25,7 +25,7 @@ app.post("/api/referral/create", async (req, res) => {
       data: { referrerName, referrerEmail, refereeName, refereeEmail },
     });
 
-    // ✅ Send email notification
+    //  Send email notification
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -49,7 +49,7 @@ app.post("/api/referral/create", async (req, res) => {
   }
 });
 
-// ✅ Start server
+// Start server
 app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`Server is running`);
 });

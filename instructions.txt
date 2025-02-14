@@ -1,5 +1,5 @@
 1.Login to MySQL:
-    mysql -u root -p
+    postgresql -u root -p
 
 2.Create the Database:
     CREATE DATABASE refer_earn_db;
@@ -21,7 +21,7 @@
     model Referral {
     id           String  @id @default(uuid())
     referrerName String
-    referrerEmail String @unique
+    referrerEmail String
     refereeName   String
     refereeEmail  String @unique
     createdAt     DateTime @default(now())
